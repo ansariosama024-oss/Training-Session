@@ -1,0 +1,9 @@
+num=int(input("Enter temperature in Celsius:"))
+if num<0:
+    print("Freezing")
+elif num>0 and num<20:
+    print("Cold")
+elif num>21 and num<25:
+    print("warm")
+else:
+    print("Hot")
