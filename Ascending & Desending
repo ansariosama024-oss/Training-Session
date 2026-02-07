@@ -1,0 +1,5 @@
+list=[1,23,44,556,55]
+list.sort()
+print(list)
+list.sort(reverse=True)
+print(list)
