@@ -1,0 +1,6 @@
+tup=('apple','banana','guava','papaya')
+a=tup.count("pineapple")
+if a>1:
+    print("Exist")
+else:
+    print("Not")
