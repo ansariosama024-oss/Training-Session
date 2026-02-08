@@ -1,0 +1,4 @@
+list=['apple','mango','banana','kiwi','pineapple']
+list.append("guava")
+print(list)
+list.insert(1,"papaya")
