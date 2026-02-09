@@ -1,0 +1,5 @@
+with open(r"C:\Users\ansar\OneDrive\Desktop\filehandling.txt","r+") as file1:
+     lines=file1.readlines()
+     lines[0]=lines[0].replace("muaaz","Osama Ansari")
+     file1.seek(0)
+     file1.writelines(lines)
