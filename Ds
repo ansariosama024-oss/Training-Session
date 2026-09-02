@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+int main()
+{
+    int p1[10], p2[10];
+    int n1, n2, i;
+
+    printf("Enter number of events in Process P1: ");
+    scanf("%d", &n1);
+
+    printf("Enter number of events in Process P2: ");
+    scanf("%d", &n2);
+
+    // Initialize logical clocks
+    for(i = 0; i < n1; i++)
+        p1[i] = i + 1;
+
+    for(i = 0; i < n2; i++)
+        p2[i] = i + 1;
+
+    int send, receive;
+
+    printf("\nEnter sending event number in P1: ");
+    scanf("%d", &send);
+
+    printf("Enter receiving event number in P2: ");
+    scanf("%d", &receive);
+
+    if(p2[receive - 1] <= p1[send - 1])
+    {
+        p2[receive - 1] = p1[send - 1] + 1;
+
+        for(i = receive; i < n2; i++)
+            p2[i] = p2[i - 1] + 1;
+    }
+
+    printf("\nLogical Clock of Process P1:\n");
+
+    for(i = 0; i < n1; i++)
+        printf("Event %d = %d\n", i + 1, p1[i]);
+
+    printf("\nLogical Clock of Process P2:\n");
+
+    for(i = 0; i < n2; i++)
+        printf("Event %d = %d\n", i + 1, p2[i]);
+
+    return 0;
+}
